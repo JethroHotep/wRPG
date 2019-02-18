@@ -1,5 +1,9 @@
 package me.dayton.wRPG;
 
+
+import java.util.Random;
+import java.util.List;
+
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -24,10 +28,13 @@ public class wRPG extends JavaPlugin {
 
 	public void onEnable() {
 		instance = this;
+		this.saveDefaultConfig();
 
-		getLogger().info("Enabled");
+		List<String> introMessages = this.getConfig().getStringList("Intro Messages");
+		//getLogger().info("Enabled");
 		getLogger().info("Add me on Discord: Dayton#6136");
-
+		Random temp= new Random(System.nanoTime());
+		getLogger().info(introMessages.get(temp.nextInt(introMessages.size())));
 		
 		// Furnace custom recipe
 		Furnace furnace = new Furnace();
