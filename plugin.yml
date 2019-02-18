@@ -1,0 +1,14 @@
+name: wRPG
+description: A new way to play MC
+version: 1.0
+api-version: 1.13
+author: PinochetHeliTour
+main: me.dayton.wRPG.wRPG
+commands:
+  help:
+    description: Open's help menu
+  recipes:
+    description: Open's recipes menu
+    aliases: [cr]
+  rules:
+    description: Open's rules menu
