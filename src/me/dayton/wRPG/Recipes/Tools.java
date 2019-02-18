@@ -17,6 +17,48 @@ public class Tools {
 	Plugin plugin = wRPG.getPlugin(wRPG.class);
 
 	@SuppressWarnings("deprecation")
+	public void crWoodAxe() {
+		ItemStack item = new ItemStack(Material.WOODEN_AXE,1 );
+		ItemMeta meta = item.getItemMeta();
+		meta.setDisplayName(Utils.chat("&7Poor Wooden Axe"));
+		ArrayList<String> lore = new ArrayList<String>();
+		lore.add(Utils.chat("&7Can be used to harvest &oLog"));
+		meta.setLore(lore);
+		meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		item.setItemMeta(meta);
+		
+		ShapedRecipe woodAxe = new ShapedRecipe(item);
+		
+		woodAxe.shape("SW", " W");
+		
+		woodAxe.setIngredient('S', Material.STICK);
+		woodAxe.setIngredient('W', Material.OAK_SLAB);
+		
+		plugin.getServer().addRecipe(woodAxe);
+	}
+
+	@SuppressWarnings("deprecation")
+	public void crWoodHoe () {
+		ItemStack item= new ItemStack(Material.WOODEN_HOE, 1);
+		ItemMeta meta = item.getItemMeta();
+		meta.setDisplayName(Utils.chat("&7Poor Wooden Hoe"));
+		ArrayList<String> lore = new ArrayList<String>();
+		lore.add(Utils.chat("&7Can be used to &oTill"));
+		meta.setLore(lore);
+		meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		item.setItemMeta(meta);
+			
+		ShapedRecipe woodHoe = new ShapedRecipe(item);
+		
+		woodHoe.shape("WW", " S");
+		
+		woodHoe.setIngredient('S', Material.STICK);
+		woodHoe.setIngredient('W', Material.OAK_SLAB);
+		
+		plugin.getServer().addRecipe(woodHoe);
+	}
+	
+	@SuppressWarnings("deprecation")
 	public void crWoodPickaxe() {
 		
 		ItemStack item = new ItemStack(Material.WOODEN_PICKAXE,1 );
@@ -36,27 +78,6 @@ public class Tools {
 		woodPickaxe.setIngredient('W', Material.OAK_SLAB);
 		
 		plugin.getServer().addRecipe(woodPickaxe);
-	}
-	
-	@SuppressWarnings("deprecation")
-	public void crWoodAxe() {
-		ItemStack item = new ItemStack(Material.WOODEN_AXE,1 );
-		ItemMeta meta = item.getItemMeta();
-		meta.setDisplayName(Utils.chat("&7Poor Wooden Axe"));
-		ArrayList<String> lore = new ArrayList<String>();
-		lore.add(Utils.chat("&7Can be used to harvest &oLog"));
-		meta.setLore(lore);
-		meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-		item.setItemMeta(meta);
-			
-		ShapedRecipe woodAxe = new ShapedRecipe(item);
-		
-		woodAxe.shape("SW", " W");
-		
-		woodAxe.setIngredient('S', Material.STICK);
-		woodAxe.setIngredient('W', Material.OAK_SLAB);
-		
-		plugin.getServer().addRecipe(woodAxe);
 	}
 	
 	@SuppressWarnings("deprecation")
@@ -104,24 +125,45 @@ public class Tools {
 	}
 	
 	@SuppressWarnings("deprecation")
-	public void crWoodHoe () {
-		ItemStack item= new ItemStack(Material.WOODEN_HOE, 1);
+	public void crStoneAxe() {
+		ItemStack item = new ItemStack(Material.STONE_AXE, 1);
 		ItemMeta meta = item.getItemMeta();
-		meta.setDisplayName(Utils.chat("&7Poor Wooden Hoe"));
+		meta.setDisplayName(Utils.chat("&7Sturdy Stone Axe"));
+		ArrayList<String> lore = new ArrayList<String>();
+		lore.add(Utils.chat("&7Can be used to harvest &oLog"));
+		meta.setLore(lore);
+		meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		item.setItemMeta(meta);
+			
+		ShapedRecipe stoneAxe = new ShapedRecipe(item);
+		
+		stoneAxe.shape("SX", " X");
+		
+		stoneAxe.setIngredient('S', Material.STICK);
+		stoneAxe.setIngredient('X', Material.STONE_SLAB);
+		
+		plugin.getServer().addRecipe(stoneAxe);
+	}
+	
+	@SuppressWarnings("deprecation")
+	public void crStoneHoe () {
+		ItemStack item= new ItemStack(Material.STONE_HOE, 1);
+		ItemMeta meta = item.getItemMeta();
+		meta.setDisplayName(Utils.chat("&7Sturdy Stone Hoe"));
 		ArrayList<String> lore = new ArrayList<String>();
 		lore.add(Utils.chat("&7Can be used to &oTill"));
 		meta.setLore(lore);
 		meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		item.setItemMeta(meta);
 			
-		ShapedRecipe woodHoe = new ShapedRecipe(item);
+		ShapedRecipe stoneHoe = new ShapedRecipe(item);
 		
-		woodHoe.shape("WW", " S");
+		stoneHoe.shape("XX", " S");
 		
-		woodHoe.setIngredient('S', Material.STICK);
-		woodHoe.setIngredient('W', Material.OAK_SLAB);
+		stoneHoe.setIngredient('S', Material.STICK);
+		stoneHoe.setIngredient('X', Material.STONE_SLAB);
 		
-		plugin.getServer().addRecipe(woodHoe);
+		plugin.getServer().addRecipe(stoneHoe);
 	}
 	
 	@SuppressWarnings("deprecation")
@@ -145,28 +187,7 @@ public class Tools {
 		
 		plugin.getServer().addRecipe(stonePickaxe);
 	}
-	
-	@SuppressWarnings("deprecation")
-	public void crStoneAxe() {
-		ItemStack item = new ItemStack(Material.STONE_AXE, 1);
-		ItemMeta meta = item.getItemMeta();
-		meta.setDisplayName(Utils.chat("&7Sturdy Stone Axe"));
-		ArrayList<String> lore = new ArrayList<String>();
-		lore.add(Utils.chat("&7Can be used to harvest &oLog"));
-		meta.setLore(lore);
-		meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-		item.setItemMeta(meta);
-			
-		ShapedRecipe stoneAxe = new ShapedRecipe(item);
 		
-		stoneAxe.shape("SX", " X");
-		
-		stoneAxe.setIngredient('S', Material.STICK);
-		stoneAxe.setIngredient('X', Material.STONE_SLAB);
-		
-		plugin.getServer().addRecipe(stoneAxe);
-	}
-	
 	@SuppressWarnings("deprecation")
 	public void crStoneShovel() {
 		ItemStack item = new ItemStack(Material.STONE_SHOVEL, 1);
@@ -212,24 +233,45 @@ public class Tools {
 	}
 	
 	@SuppressWarnings("deprecation")
-	public void crStoneHoe () {
-		ItemStack item= new ItemStack(Material.STONE_HOE, 1);
+	public void crIronAxe() {
+		ItemStack item = new ItemStack(Material.IRON_AXE, 1);
 		ItemMeta meta = item.getItemMeta();
-		meta.setDisplayName(Utils.chat("&7Sturdy Stone Hoe"));
+		meta.setDisplayName(Utils.chat("&fHardened Iron Axe"));
+		ArrayList<String> lore = new ArrayList<String>();
+		lore.add(Utils.chat("&7Can be used to harvest &oLog"));
+		meta.setLore(lore);
+		meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		item.setItemMeta(meta);
+			
+		ShapedRecipe ironAxe = new ShapedRecipe(item);
+		
+		ironAxe.shape("SI", " I");
+		
+		ironAxe.setIngredient('S', Material.STICK);
+		ironAxe.setIngredient('I', Material.IRON_INGOT);
+		
+		plugin.getServer().addRecipe(ironAxe);
+	}
+	
+	@SuppressWarnings("deprecation")
+	public void crIronHoe () {
+		ItemStack item= new ItemStack(Material.IRON_HOE, 1);
+		ItemMeta meta = item.getItemMeta();
+		meta.setDisplayName(Utils.chat("&fHardened Iron Hoe"));
 		ArrayList<String> lore = new ArrayList<String>();
 		lore.add(Utils.chat("&7Can be used to &oTill"));
 		meta.setLore(lore);
 		meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		item.setItemMeta(meta);
 			
-		ShapedRecipe stoneHoe = new ShapedRecipe(item);
+		ShapedRecipe ironHoe = new ShapedRecipe(item);
 		
-		stoneHoe.shape("XX", " S");
+		ironHoe.shape("II", " S");
 		
-		stoneHoe.setIngredient('S', Material.STICK);
-		stoneHoe.setIngredient('X', Material.STONE_SLAB);
+		ironHoe.setIngredient('S', Material.STICK);
+		ironHoe.setIngredient('W', Material.OAK_SLAB);
 		
-		plugin.getServer().addRecipe(stoneHoe);
+		plugin.getServer().addRecipe(ironHoe);
 	}
 	
 	@SuppressWarnings("deprecation")
@@ -253,28 +295,7 @@ public class Tools {
 		
 		plugin.getServer().addRecipe(ironPickaxe);
 	}
-	
-	@SuppressWarnings("deprecation")
-	public void crIronAxe() {
-		ItemStack item = new ItemStack(Material.IRON_AXE, 1);
-		ItemMeta meta = item.getItemMeta();
-		meta.setDisplayName(Utils.chat("&fHardened Iron Axe"));
-		ArrayList<String> lore = new ArrayList<String>();
-		lore.add(Utils.chat("&7Can be used to harvest &oLog"));
-		meta.setLore(lore);
-		meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-		item.setItemMeta(meta);
-			
-		ShapedRecipe ironAxe = new ShapedRecipe(item);
 		
-		ironAxe.shape("SI", " I");
-		
-		ironAxe.setIngredient('S', Material.STICK);
-		ironAxe.setIngredient('I', Material.IRON_INGOT);
-		
-		plugin.getServer().addRecipe(ironAxe);
-	}
-	
 	@SuppressWarnings("deprecation")
 	public void crIronShovel() {
 		ItemStack item = new ItemStack(Material.IRON_SHOVEL, 1);
@@ -320,26 +341,26 @@ public class Tools {
 	}
 	
 	@SuppressWarnings("deprecation")
-	public void crIronHoe () {
-		ItemStack item= new ItemStack(Material.IRON_HOE, 1);
+	public void crDiamondAxe() {
+		ItemStack item = new ItemStack(Material.DIAMOND_AXE, 1);
 		ItemMeta meta = item.getItemMeta();
-		meta.setDisplayName(Utils.chat("&fHardened Iron Hoe"));
+		meta.setDisplayName(Utils.chat("&bDurable Diamond Axe"));
 		ArrayList<String> lore = new ArrayList<String>();
-		lore.add(Utils.chat("&7Can be used to &oTill"));
+		lore.add(Utils.chat("&7Can be used to harvest &oLog"));
 		meta.setLore(lore);
 		meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		item.setItemMeta(meta);
 			
-		ShapedRecipe ironHoe = new ShapedRecipe(item);
+		ShapedRecipe diamondAxe = new ShapedRecipe(item);
 		
-		ironHoe.shape("II", " S");
+		diamondAxe.shape("SD", " D");
 		
-		ironHoe.setIngredient('S', Material.STICK);
-		ironHoe.setIngredient('W', Material.OAK_SLAB);
+		diamondAxe.setIngredient('S', Material.STICK);
+		diamondAxe.setIngredient('D', Material.DIAMOND);
 		
-		plugin.getServer().addRecipe(ironHoe);
+		plugin.getServer().addRecipe(diamondAxe);
 	}
-	
+		
 	@SuppressWarnings("deprecation")
 	public void crDiamondPickaxe() {
 		
@@ -363,24 +384,24 @@ public class Tools {
 	}
 	
 	@SuppressWarnings("deprecation")
-	public void crDiamondAxe() {
-		ItemStack item = new ItemStack(Material.DIAMOND_AXE, 1);
+	public void crDiamondHoe () {
+		ItemStack item= new ItemStack(Material.DIAMOND_HOE, 1);
 		ItemMeta meta = item.getItemMeta();
-		meta.setDisplayName(Utils.chat("&bDurable Diamond Axe"));
+		meta.setDisplayName(Utils.chat("&dHardened Diamond Hoe"));
 		ArrayList<String> lore = new ArrayList<String>();
-		lore.add(Utils.chat("&7Can be used to harvest &oLog"));
+		lore.add(Utils.chat("&7Can be used to &oTill"));
 		meta.setLore(lore);
 		meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		item.setItemMeta(meta);
 			
-		ShapedRecipe diamondAxe = new ShapedRecipe(item);
+		ShapedRecipe diamondHoe = new ShapedRecipe(item);
 		
-		diamondAxe.shape("SD", " D");
+		diamondHoe.shape("DD", " S");
 		
-		diamondAxe.setIngredient('S', Material.STICK);
-		diamondAxe.setIngredient('D', Material.DIAMOND);
+		diamondHoe.setIngredient('S', Material.STICK);
+		diamondHoe.setIngredient('D', Material.DIAMOND);
 		
-		plugin.getServer().addRecipe(diamondAxe);
+		plugin.getServer().addRecipe(diamondHoe);
 	}
 	
 	@SuppressWarnings("deprecation")
@@ -428,29 +449,6 @@ public class Tools {
 	}
 	
 	@SuppressWarnings("deprecation")
-	public void crhDiamondPickaxe() {
-		
-		ItemStack item = new ItemStack(Material.DIAMOND_PICKAXE, 1);
-		ItemMeta meta = item.getItemMeta();
-		meta.setDisplayName(Utils.chat("&dHardened Diamond Pickaxe"));
-		ArrayList<String> lore = new ArrayList<String>();
-		lore.add(Utils.chat("&7Can be used to mine &oStone & Ores"));
-		meta.addEnchant(Enchantment.DIG_SPEED, 2, true);
-		meta.setLore(lore);
-		meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-		item.setItemMeta(meta);
-			
-		ShapedRecipe hdiamondPickaxe = new ShapedRecipe(item);
-		
-		hdiamondPickaxe.shape("EE", "SE");
-		
-		hdiamondPickaxe.setIngredient('S', Material.STICK);
-		hdiamondPickaxe.setIngredient('E', Material.ENDER_PEARL);
-		
-		plugin.getServer().addRecipe(hdiamondPickaxe);
-	}
-	
-	@SuppressWarnings("deprecation")
 	public void crhDiamondAxe() {
 		ItemStack item = new ItemStack(Material.DIAMOND_AXE, 1);
 		ItemMeta meta = item.getItemMeta();
@@ -472,6 +470,50 @@ public class Tools {
 		plugin.getServer().addRecipe(hdiamondAxe);
 	}
 	
+	@SuppressWarnings("deprecation")
+	public void crhDiamondHoe () {
+		ItemStack item= new ItemStack(Material.DIAMOND_HOE, 1);
+		ItemMeta meta = item.getItemMeta();
+		meta.setDisplayName(Utils.chat("&dHardened Diamond Hoe"));
+		ArrayList<String> lore = new ArrayList<String>();
+		lore.add(Utils.chat("&7Can be used to &oTill"));
+		meta.setLore(lore);
+		meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		item.setItemMeta(meta);
+			
+		ShapedRecipe hdiamondHoe = new ShapedRecipe(item);
+		
+		hdiamondHoe.shape("EE", " S");
+		
+		hdiamondHoe.setIngredient('S', Material.STICK);
+		hdiamondHoe.setIngredient('E', Material.ENDER_PEARL);
+		
+		plugin.getServer().addRecipe(hdiamondHoe);
+	}
+	
+	@SuppressWarnings("deprecation")
+	public void crhDiamondPickaxe() {
+		
+		ItemStack item = new ItemStack(Material.DIAMOND_PICKAXE, 1);
+		ItemMeta meta = item.getItemMeta();
+		meta.setDisplayName(Utils.chat("&dHardened Diamond Pickaxe"));
+		ArrayList<String> lore = new ArrayList<String>();
+		lore.add(Utils.chat("&7Can be used to mine &oStone & Ores"));
+		meta.addEnchant(Enchantment.DIG_SPEED, 2, true);
+		meta.setLore(lore);
+		meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		item.setItemMeta(meta);
+			
+		ShapedRecipe hdiamondPickaxe = new ShapedRecipe(item);
+		
+		hdiamondPickaxe.shape("EE", "SE");
+		
+		hdiamondPickaxe.setIngredient('S', Material.STICK);
+		hdiamondPickaxe.setIngredient('E', Material.ENDER_PEARL);
+		
+		plugin.getServer().addRecipe(hdiamondPickaxe);
+	}
+		
 	@SuppressWarnings("deprecation")
 	public void crhDiamondShovel() {
 		ItemStack item = new ItemStack(Material.DIAMOND_SHOVEL, 1);
@@ -516,47 +558,5 @@ public class Tools {
 		hdiamondSword.setIngredient('E', Material.ENDER_PEARL);
 		
 		plugin.getServer().addRecipe(hdiamondSword);
-	}
-	
-	@SuppressWarnings("deprecation")
-	public void crDiamondHoe () {
-		ItemStack item= new ItemStack(Material.DIAMOND_HOE, 1);
-		ItemMeta meta = item.getItemMeta();
-		meta.setDisplayName(Utils.chat("&dHardened Diamond Hoe"));
-		ArrayList<String> lore = new ArrayList<String>();
-		lore.add(Utils.chat("&7Can be used to &oTill"));
-		meta.setLore(lore);
-		meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-		item.setItemMeta(meta);
-			
-		ShapedRecipe diamondHoe = new ShapedRecipe(item);
-		
-		diamondHoe.shape("DD", " S");
-		
-		diamondHoe.setIngredient('S', Material.STICK);
-		diamondHoe.setIngredient('D', Material.DIAMOND);
-		
-		plugin.getServer().addRecipe(diamondHoe);
-	}
-	
-	@SuppressWarnings("deprecation")
-	public void crhDiamondHoe () {
-		ItemStack item= new ItemStack(Material.DIAMOND_HOE, 1);
-		ItemMeta meta = item.getItemMeta();
-		meta.setDisplayName(Utils.chat("&dHardened Diamond Hoe"));
-		ArrayList<String> lore = new ArrayList<String>();
-		lore.add(Utils.chat("&7Can be used to &oTill"));
-		meta.setLore(lore);
-		meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-		item.setItemMeta(meta);
-			
-		ShapedRecipe hdiamondHoe = new ShapedRecipe(item);
-		
-		hdiamondHoe.shape("EE", " S");
-		
-		hdiamondHoe.setIngredient('S', Material.STICK);
-		hdiamondHoe.setIngredient('E', Material.ENDER_PEARL);
-		
-		plugin.getServer().addRecipe(hdiamondHoe);
 	}
 }

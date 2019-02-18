@@ -52,32 +52,39 @@ public class wRPG extends JavaPlugin {
 		materials.crIronFrag();
 		
 		// Tools custom recipe
+		/*
+		Axe
+		Hoe
+		Pickaxe
+		Shovel
+		Sword
+		*/
 		Tools items = new Tools();
-		items.crWoodPickaxe();
 		items.crWoodAxe();
+		items.crWoodHoe();
+		items.crWoodPickaxe();
 		items.crWoodShovel();
 		items.crWoodSword();
-		items.crWoodHoe();
 		items.crStoneAxe();
+		items.crStoneHoe();
 		items.crStonePickaxe();
 		items.crStoneShovel();
 		items.crStoneSword();
-		items.crStoneHoe();
 		items.crIronAxe();
 		items.crIronPickaxe();
+		items.crIronHoe();
 		items.crIronShovel();
 		items.crIronSword();
-		items.crIronHoe();
 		items.crDiamondAxe();
+		items.crDiamondHoe();
 		items.crDiamondPickaxe();
 		items.crDiamondShovel();
 		items.crDiamondSword();
 		items.crhDiamondAxe();
+		items.crhDiamondHoe();
 		items.crhDiamondPickaxe();
 		items.crhDiamondShovel();
 		items.crhDiamondSword();
-		items.crDiamondHoe();
-		items.crhDiamondHoe();
 
 		me.dayton.wRPG.UI.MainUI.initalize();
 		me.dayton.wRPG.UI.Help.HelpUI.initalize();
