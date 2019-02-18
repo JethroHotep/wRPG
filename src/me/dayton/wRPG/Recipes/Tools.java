@@ -269,7 +269,7 @@ public class Tools {
 		ironHoe.shape("II", " S");
 		
 		ironHoe.setIngredient('S', Material.STICK);
-		ironHoe.setIngredient('W', Material.OAK_SLAB);
+		ironHoe.setIngredient('I', Material.IRON_INGOT);
 		
 		plugin.getServer().addRecipe(ironHoe);
 	}
