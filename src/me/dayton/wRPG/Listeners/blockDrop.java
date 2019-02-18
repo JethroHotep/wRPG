@@ -51,6 +51,15 @@ public class blockDrop implements Listener {
 		os1M.setLore(building);
 		os1M.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		os1.setItemMeta(os1M);
+		
+		ItemStack kelpDirt = new ItemStack(Material.DRIED_KELP, 4);
+		ItemMeta kelpDirtM = kelpDirt.getItemMeta();
+		kelpDirtM.setDisplayName(Utils.chat("&7Dirt"));
+		ArrayList<String> kelpDirtLore = new ArrayList<String>();
+		kelpDirtLore.add(Utils.chat("&7Basic Crafting Material"));
+		kelpDirtM.setLore(kelpDirtLore);
+		kelpDirtM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		kelpDirt.setItemMeta(kelpDirtM);
 
 		if(e.getBlock().getType().equals(Material.OAK_LOG)) {
 			e.setCancelled(true);
@@ -74,6 +83,24 @@ public class blockDrop implements Listener {
 			e.setCancelled(true);
 			p.getItemInHand().setDurability((short) (p.getItemInHand().getDurability() + 1));
 			e.getBlock().getWorld().dropItemNaturally(e.getBlock().getLocation(), os1);
+			e.getBlock().setType(Material.AIR);
+		}
+		if(e.getBlock().getType().equals(Material.DIRT)) {
+			e.setCancelled(true);
+			p.getItemInHand().setDurability((short) (p.getItemInHand().getDurability() + 1));
+			e.getBlock().getWorld().dropItemNaturally(e.getBlock().getLocation(), kelpDirt);
+			e.getBlock().setType(Material.AIR);
+		}
+		if(e.getBlock().getType().equals(Material.GRASS_BLOCK)) {
+			e.setCancelled(true);
+			p.getItemInHand().setDurability((short) (p.getItemInHand().getDurability() + 1));
+			e.getBlock().getWorld().dropItemNaturally(e.getBlock().getLocation(), kelpDirt);
+			e.getBlock().setType(Material.AIR);
+		}
+		if(e.getBlock().getType().equals(Material.GRASS_PATH)) {
+			e.setCancelled(true);
+			p.getItemInHand().setDurability((short) (p.getItemInHand().getDurability() + 1));
+			e.getBlock().getWorld().dropItemNaturally(e.getBlock().getLocation(), kelpDirt);
 			e.getBlock().setType(Material.AIR);
 		}
 	}
