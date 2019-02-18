@@ -57,14 +57,17 @@ public class wRPG extends JavaPlugin {
 		items.crWoodAxe();
 		items.crWoodShovel();
 		items.crWoodSword();
+		items.crWoodHoe();
 		items.crStoneAxe();
 		items.crStonePickaxe();
 		items.crStoneShovel();
 		items.crStoneSword();
+		items.crStoneHoe();
 		items.crIronAxe();
 		items.crIronPickaxe();
 		items.crIronShovel();
 		items.crIronSword();
+		items.crIronHoe();
 		items.crDiamondAxe();
 		items.crDiamondPickaxe();
 		items.crDiamondShovel();
@@ -73,6 +76,8 @@ public class wRPG extends JavaPlugin {
 		items.crhDiamondPickaxe();
 		items.crhDiamondShovel();
 		items.crhDiamondSword();
+		items.crDiamondHoe();
+		items.crhDiamondHoe();
 
 		me.dayton.wRPG.UI.MainUI.initalize();
 		me.dayton.wRPG.UI.Help.HelpUI.initalize();
