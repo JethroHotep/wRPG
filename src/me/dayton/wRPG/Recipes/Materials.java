@@ -39,7 +39,7 @@ public class Materials {
 	@SuppressWarnings("deprecation")
 	public void crStick() {
 		
-		ItemStack rstick = new ItemStack(Material.STICK, 1);
+		ItemStack rstick = new ItemStack(Material.STICK, 2);
 		ItemMeta rstickM = rstick.getItemMeta();
 		rstickM.setDisplayName(Utils.chat("&7Stick"));
 		ArrayList<String> lore = new ArrayList<String>();
